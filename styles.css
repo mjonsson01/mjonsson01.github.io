@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+/* Global styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+
+h2{
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Set the width of the list to be aligned with the content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    color: #3498db; /* blue color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Resumé link styling */
+.resume-link {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Section styling */
+.section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.urbanist-MainFont {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /*100 to 900*/
+    font-style: normal;
+}
+.project-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.project-name {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: left;
+    max-width: 60%; /* Limit the width so the description doesn't wrap too early */
+    flex: 1; /* Allow project name to take up 60% of the space */
+    margin-right: 20px;
+}
+
+.project-description {
+    font-size: 1.2em;
+    flex: 3; /* Allow description to take up the remaining space */
+    word-wrap: break-word; /* Ensures description text wraps within its container */
+}
+
+.project-name a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.project-name a:hover {
+    text-decoration: underline;
+}
+
