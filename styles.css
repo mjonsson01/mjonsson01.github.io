@@ -26,6 +26,14 @@ p {
     width: 80%;
 }
 
+.p-section {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 80%;
+    text-align: justify;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -97,3 +105,27 @@ a:hover {
     text-decoration: underline;
 }
 
+.demo-gif {
+    width: 100%;  /* Adjusts the GIF to the full width of its container */
+    max-width: 800px;  /* Optional: limits the size to 800px, you can adjust it */
+    height: auto;  /* Ensures the aspect ratio is maintained */
+}
+.gif-container {
+    text-align: center; /* Centers the GIF */
+    padding: 20px;      /* Adds some space around the GIF */
+}
+
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+}

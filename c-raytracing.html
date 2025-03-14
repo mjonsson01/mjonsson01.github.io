@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-RW2P8NKLW9');
+        </script>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marco Jonsson's Projects</title>
+        <link rel="stylesheet" href="styles.css">
+    </head> 
+<body>
+    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+        WORK IN PROGRESS
+    </div>
+    <h1>C Raytracing Demo</h1>
+    <div class="section">
+        <p>
+            This demo showcases an interactive implementation of mathematical ray tracing and dynamic light occlusion 
+            using C and SDL2. It allows you to see how rays interact with objects in a scene, including reflections and shadows.
+        </p
+        
+    </div>
+
+    <div class="section">
+        <p>
+            The program uses a mathematical model to trace rays as they travel through a 3D scene. The GIF shows 
+            the basic interaction of rays with objects and their reflections. It uses SDL2 for graphics rendering.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>
+            Programmatical Heuristic Breakdown:
+        </h3>
+        <div class="p-section">
+            First I initialized a graphical window using SDL2 library functionality, and defining some global constants for the height and width of the window.
+        </div>
+        <div class="p-section">
+            Next, we made a RenderObject data structure, which our Circle struct can inherit some fields from like the x-y position, and the pointer to the collision detecttion. The RenderObject Parent type makes it far easier
+            to add other shapes as this program expands. 
+        </div>
+        <div class="p-section">
+            We then created a function called FillCircle, that allows us to fill in the circle for each frame generated for the SDL2 window. Essentially, it takes in the circle's position and radius,
+             then generates a distance_squared value, to determine the locations of all the pixels it needs to fill with the specified colors. I also made use of the SDL2 Renderer, since it supports hardware acceleration, 
+            and also prevents some amounts of overdrawing natively. It also allows use of V-Sync, a process that synchronizes the local display framerate with the generated frames, prevented frame stutters and hiccups.
+            There are more elegant approaches to preventing frame stutter, but V-Sync worked well for the purposes of this project, as it does not need to be obscenely performant.x 
+        </div>
+
+    </div>
+
+    <div class="section">
+        <p>
+            Feel free to explore the source code and experiment with different parameters for the ray tracing algorithm.
+        </p>
+        <p>
+            Below is a GIF demonstration of the raytracing process.
+        </p>
+        <div class="gif-container">
+            <img src="DemoGifs/RayTracingDemo.gif" alt="Raytracing Demo GIF" class="demo-gif">
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="path_to_your_image.jpg" alt="Image Description">
+        <div class="caption">
+            Your caption text goes here. You can include LaTeX or Markdown: $E = mc^2$, **bold text**, *italic text*.
+        </div>
+        
+    </div>
+</body>
+</html>
