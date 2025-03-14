@@ -20,14 +20,7 @@
 <body>
     <!-- nav bar-->
     <div id="navbar-container"></div>
-        <script>
-            fetch("../pages-navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("navbar-container").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        </script>
+    <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
     <h1 id="coding-projects">Coding Projects</h1>
     <div class="section">
         <p>
@@ -51,5 +44,7 @@
             </li>
         </ul>
     </div>
-
+    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+        WORK IN PROGRESS
+    </div>
 </body>
