@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RW2P8NKLW9');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Jonsson's Coding Projects</title>
+    <link rel="stylesheet" href="/mjonsson01.github.io/CSSStyles/styles.css">
+</head> 
+
+<body>
+    <!-- nav bar-->
+    <div id="navbar-container"></div>
+        <script>
+            fetch("../pages-navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        </script>
+    <h1 id="coding-projects">Coding Projects</h1>
+    <div class="section">
+        <p>
+            Here are some of the projects I've worked on! They will open a separate window with a demonstration and explanation!
+        </p>
+        <ul class="projects-list">
+            <li class="project-item">
+                <span class="project-name"><a href="ProjectPages/space-game.html">Scala Game:</a></span>
+                <span class="project-description">An interactive Space Invaders-esque game with integrated time-rewind 
+                    functionality, and dynamic enemy behavior.</span>
+            </li>
+            <li class="project-item">
+                <span class="project-name"><a href="ProjectPages/c-raytracing.html">C Raytracing Demo:</a></span>
+                <span class="project-description">Interactive demonstration of mathematical ray tracing and dynamic 
+                    light occlusion using C and SDL2.</span>
+            </li>
+            <li class="project-item">
+                <span class="project-name"><a href="ProjectPages/haskell-chess.html">Haskell Chess Engine:</a></span>
+                <span class="project-description">A fully playable chess engine with custom command line IO, and an
+                     interactive play vs. computer mode with 1300-strength minimax-based AI.</span>
+            </li>
+        </ul>
+    </div>
+
+</body>

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+/* Global styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+
+h2{
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.p-section {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word; /* More aggressive justification */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%; /* Set the width of the list to be aligned with the content */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    margin: 15px 0;
+}
+
+a {
+    color: #3498db; /* blue color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Center the entire table on the screen */
+table {
+    width: auto; /* Ensures the table only takes up as much space as needed */
+    margin: 0 auto; /* Centers the table horizontally */
+    text-align: center; /* Centers the text inside the table cells */
+    display: table; /* Makes sure it's treated as a table element */
+    margin-top: 100px; /* Optional: Add space from the top of the page */
+}
+/* Resumé link styling */
+.resume-link {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Section styling */
+.section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.urbanist-MainFont {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /*100 to 900*/
+    font-style: normal;
+}
+.project-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.project-name {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: left;
+    max-width: 60%; /* Limit the width so the description doesn't wrap too early */
+    flex: 1; /* Allow project name to take up 60% of the space */
+    margin-right: 20px;
+}
+
+.project-description {
+    font-size: 1.2em;
+    flex: 3; /* Allow description to take up the remaining space */
+    word-wrap: break-word; /* Ensures description text wraps within its container */
+}
+
+.project-name a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.project-name a:hover {
+    text-decoration: underline;
+}
+
+.demo-gif {
+    width: 100%;  /* Adjusts the GIF to the full width of its container */
+    max-width: 800px;  /* Optional: limits the size to 800px, you can adjust it */
+    height: auto;  /* Ensures the aspect ratio is maintained */
+}
+.gif-container {
+    text-align: center; /* Centers the GIF */
+    padding: 20px;      /* Adds some space around the GIF */
+}
+
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Centers the navbar */
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 8px; /* Rounded edges for the navbar */
+    width: 80%; /* Adjust the width as needed */
+}
+
+
+.nav-list li {
+    margin: 0;
+    display: flex; /* Makes the li elements stretch */
+}
+
+.nav-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px; /* Rounded edges for each link */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
+    align-items: stretch; /* Ensure the link stretches to fill the li's height */
+}
+
+
+.nav-list a:hover {
+    background-color: #111;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for hover effect */
+}
+/* General button styling */
+.styled-button {
+    background-color: #333; /* Same background color as navbar */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners for the buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    display: inline-block;
+}
+
+.styled-button:hover {
+    background-color: #111; /* Darker background on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soft shadow effect on hover */
+}
+
+.styled-button:focus {
+    outline: none; /* Removes default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3); /* Blue focus ring for accessibility */
+}
+
+/* Optional: Button spacing */
+table td {
+    padding: 0 10px;
+}
+
+/* .contact-info {
+
+    text-align: justify;
+} */
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-entry {
+    display: flex;
+    align-items: center;
+    background: #9c9696;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-entry p {
+    margin-left: 80px;
+    text-align: justify;
+    color: #000000; 
+}
+.contact-entry a {
+    color: #0011ff; /* Change to a color that fits your theme */
+    text-decoration: none;
+}
+
+.contact-entry a:hover {
+    text-decoration: underline;
+}
+.contact-entry img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
