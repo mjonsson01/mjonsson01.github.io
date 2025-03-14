@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RW2P8NKLW9');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Jonsson's Coding Projects</title>
+    <link rel="stylesheet" href="/mjonsson01.github.io/CSSStyles/styles.css">
+</head> 
+
+<body>
+    <!-- nav bar-->
+    <div id="navbar-container"></div>
+        <script>
+            fetch("../pages-navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading the navbar:", error));
+        </script>
+</body>
+<h1>
+    About Me
+</h1>
+<div class="section">
+    <p>
+        I am a graduating senior from Trinity University. I have a B.S in Physics and Computer Science, with a minor in Mathematics and
+        Music Performance. I have a deep background in theoretical and applied mathematics and physics, and enjoy using these to in my
+        coding applications. I love working on original problems ranging from circuit design to AI chess bots, and will often use
+        unorthodox and novel methods to solve them. I have research experience in Biophysics and Fluid Dynamics, as well as growing 
+        work experience in aerospace software, frontend/backend web development, machine learning, and data analytics.
+    </p>
+    <p>
+        In my free time, I run cross-terrain, make culinary experiments in my kitchen, play chess, compete in ultimate frisbee, read 
+        sci-fi/fantasy, and perform both solo and orchestral violin repertoire as the concertmaster of the Trinity Symphony Orchestra.
+    </p>
+    <p>
+        My resumé can be found <a class="resume-link" href="ResumeFiles/Marco_Jonsson_Resume.docx" target="_blank">here in .docx format</a> and <a class="resume-link" href="ResumeFiles/Marco_Jonsson_Resume.pdf" target="_blank"> here in .pdf format</a>
+    </p>
+</div>
+</html>

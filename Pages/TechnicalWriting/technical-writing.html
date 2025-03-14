@@ -13,28 +13,26 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marco Jonsson's Projects</title>
-    <link rel="stylesheet" href="CSSStyles/styles.css">
+    <title>Marco Jonsson's Coding Projects</title>
+    <link rel="stylesheet" href="/mjonsson01.github.io/CSSStyles/styles.css">
 </head> 
+
 <body>
+    <!-- nav bar-->
     <div id="navbar-container"></div>
         <script>
-            fetch("home-navbar.html")
+            fetch("../pages-navbar.html")
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("navbar-container").innerHTML = data;
                 })
                 .catch(error => console.error("Error loading the navbar:", error));
         </script>
-    <h1>Welcome to Marco Jonsson's Personal Portfolio</h1>
-
-<!-- button table Will not use for now-->
-<!-- <table>
-    <tr>
-        <td><button class="styled-button" onclick="location.href='CodingProjects/coding-projects.html'">Coding Projects</button></td>
-        <td><button class="styled-button" onclick="location.href='research-interests'">Research Interests and Honors Thesis</button></td>
-        <td><button class="styled-button" onclick="location.href='#technical-writing'">Technical Writing Samples</button></td>
-    </tr>
-</table> -->
 </body>
+
+<h1 id="technical-writing">Technical Writing Samples</h1>
+<div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+    WORK IN PROGRESS
+</div>
+
 </html>
