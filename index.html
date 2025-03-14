@@ -17,16 +17,19 @@
     <link rel="stylesheet" href="/CSSStyles/styles.css">
 </head> 
 <body>
-    <div id="navbar-container"></div>
-        <script>
-            fetch("home-navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("navbar-container").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        </script>
+
+     <div id="navbar-container"></div>
+     <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
+
     <h1>Welcome to Marco Jonsson's Personal Portfolio</h1>
+    <div class="section">
+        <p>
+            Check out my work, my interests and hobbies, or contact me using the NavBar above!
+        </p>
+        <p> 
+            A downloadable copy of my Resumé can be found in the About Me section!
+        </p>
+    </div>
 
 <!-- button table Will not use for now-->
 <!-- <table>
@@ -36,5 +39,9 @@
         <td><button class="styled-button" onclick="location.href='#technical-writing'">Technical Writing Samples</button></td>
     </tr>
 </table> -->
+<div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+    WORK IN PROGRESS
+</div>
 </body>
+
 </html>

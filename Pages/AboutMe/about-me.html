@@ -20,15 +20,7 @@
 <body>
     <!-- nav bar-->
     <div id="navbar-container"></div>
-        <script>
-            fetch("../pages-navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("navbar-container").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        </script>
-</body>
+    <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
 <h1>
     About Me
 </h1>
@@ -47,5 +39,8 @@
     <p>
         My resumé can be found <a class="resume-link" href="ResumeFiles/Marco_Jonsson_Resume.docx" target="_blank">here in .docx format</a> and <a class="resume-link" href="ResumeFiles/Marco_Jonsson_Resume.pdf" target="_blank"> here in .pdf format</a>
     </p>
+</div>
+<div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+    WORK IN PROGRESS
 </div>
 </html>

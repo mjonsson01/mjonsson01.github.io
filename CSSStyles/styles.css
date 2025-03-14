@@ -264,3 +264,41 @@ table td {
     border-radius: 8px;
     cursor: pointer;
 }
+/* 
+
+.scroll-sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-entry {
+    width: 80%;
+    height: 400px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-entry:nth-child(odd) {
+    transform: translateX(100px);
+}
+
+.scroll-entry.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Assign background images */
+/* #coding-projects { background-image: url('/Files/NavImages/coding-projects.jpg'); }
+#research { background-image: url('/Files/NavImages/research.jpg'); }
+#technical-writing { background-image: url('/Files/NavImages/technical-writing.jpg'); }
+#hobbies { background-image: url('/Files/NavImages/hobbies.jpg'); }  */

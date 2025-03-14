@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RW2P8NKLW9');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marco Jonsson's Coding Projects</title>
-    <link rel="stylesheet" href="/CSSStyles/styles.css">
-</head> 
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-RW2P8NKLW9');
+        </script>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marco Jonsson's Technical Writing Page</title>
+        <link rel="stylesheet" href="/CSSStyles/styles.css">
+    </head> 
+    
 
 <body>
     <!-- nav bar-->
     <div id="navbar-container"></div>
-        <script>
-            fetch("../pages-navbar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("navbar-container").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading the navbar:", error));
-        </script>
+    <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
 </body>
 
 <h1 id="technical-writing">Technical Writing Samples</h1>

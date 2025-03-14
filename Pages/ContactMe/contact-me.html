@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Marco Jonsson</title>
-    <link rel="stylesheet" href="/CSSStyles/styles.css">
-</head>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW2P8NKLW9"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-RW2P8NKLW9');
+        </script>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marco Jonsson's Contact Page</title>
+        <link rel="stylesheet" href="/CSSStyles/styles.css">
+    </head> 
+    
 <body>
     <div id="navbar-container"></div>
-    <script>
-        fetch("../pages-navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("navbar-container").innerHTML = data;
-            })
-            .catch(error => console.error("Error loading the navbar:", error));
-    </script>
+    <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
     
     <section class="contact-container">
         <h1>Contact Me</h1>
-        <p>If you'd like to get in touch, feel free to reach out through any of the methods below. I am also active on Instagram!</p>
+        <p>If you'd like to get in touch, feel free to reach out through any of the methods below!</p>
         <div class="contact-info">
             <div class="contact-entry">
-                <img src="icons/email.png" alt="Email Icon">
-                <p><strong>Email: </strong> <a href="mailto:marco.e.jonsson@gmail.com">marco.e.jonsson@example.com</a></p>
+                <img src="/Files/SiteImages/mailIcon.png" alt="Email Icon">
+                <p><strong>Email: </strong> <a href="mailto:marco.e.jonsson@gmail.com">marco.e.jonsson@gmail.com</a></p>
             </div>
             <div class="contact-entry">
-                <img src="icons/phone.png" alt="Phone Icon">
+                <img src="/Files/SiteImages/phoneIcon.png" alt="Phone Icon">
                 <p><strong>Phone: </strong> +1 (281)-818-2906</p>
             </div>
             <div class="contact-entry">
-                <img src="icons/website.png" alt="Website Icon">
+                <img src="/Files/SiteImages/smileyIcon.png" alt="Website Icon">
                 <p><strong>Website: </strong> <a href="https://mjonsson01.github.io">Personal Portfolio (You're on it!)</a></p>
             </div>
             <div class="contact-entry">
-                <img src="icons/github.png" alt="GitHub Icon">
+                <a href="https://github.com/mjonsson01" class="contact-button" target="_blank">
+                    <img src="/Files/SiteImages/githubicon.png" alt="GitHub Icon">
+                </a>
                 <p><strong>Personal GitHub: </strong> <a href="https://github.com/mjonsson01" target="_blank">github.com/mjonsson01</a></p>
             </div>
             <div class="contact-entry">
-                <img src="icons/github.png" alt="GitHub Icon">
+                <a href="https://github.com/mjonsson1" class="contact-button" target="_blank">
+                    <img src="/Files/SiteImages/githubicon.png" alt="GitHub Icon">
+                </a>
                 <p><strong>University GitHub: </strong> <a href="https://github.com/mjonsson1" target="_blank">github.com/mjonsson1</a></p>
             </div>
             <div class="contact-entry">
-                <img src="icons/linkedin.png" alt="LinkedIn Icon">
+                <a href="https://www.linkedin.com/in/marco-jonsson-8a5a20228/" class="contact-button" target="_blank">
+                    <img src="/Files/SiteImages/linkedinIcon.webp" alt="LinkedIn Icon">
+                </a>
                 <p><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/marco-jonsson-8a5a20228/" target="_blank">Marco Jonsson LinkedIn</a></p>
             </div>
             <div class="contact-entry">
-                <img src="icons/instagram.png" alt="Instagram Icon">
+                <a href="http://www.instagram.com/marco.jonsson" class="contact-button" target="_blank">
+                    <img src="/Files/SiteImages/instaIcon.webp" alt="Instagram Icon">
+                </a>
                 <p><strong>Instagram: </strong><a href="http://www.instagram.com/marco.jonsson" target="_blank">@marco.jonsson</a></p>
             </div>
         </div>
-<!--         
-        <h2>Send Me a Message</h2>
-        <form action="mailto:your.email@example.com" method="post" enctype="text/plain" class="contact-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form> -->
+
     </section>
+    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+        WORK IN PROGRESS
+    </div>
 </body>
 </html>
