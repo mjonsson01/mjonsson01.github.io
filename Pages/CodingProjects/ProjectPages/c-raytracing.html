@@ -15,19 +15,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Marco Jonsson's C Raytracing Project</title>
         <link rel="stylesheet" href="/CSSStyles/styles.css">
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
     </head> 
 <body>
     <div id="navbar-container"></div>
     <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
-    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+    <!-- <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
         WORK IN PROGRESS
-    </div>
+    </div> -->
     <h1>C Raytracing Demo</h1>
     <div class="section">
         <p>
             This demo showcases an interactive implementation of mathematical ray tracing and dynamic light occlusion 
-            using C and SDL2. It allows you to see how rays interact with objects in a scene, including reflections and shadows.
-        </p
+            using C and SDL2. It allows you to see how rays interact with other objects in a scene. I am working on adding reflection capababilities
+            as well as a menu to select objects to populate the screen with!
+        </p>
+        <p>
+            The source code can be found at <a href="https://github.com/mjonsson01/raytracingC">Ray Tracing in C.</a>
+        </p>
+
     </div>
 
     <div class="section">
@@ -38,9 +46,9 @@
     </div>
 
     <div class="section">
-        <h3>
+        <h2>
             Programmatical Heuristic Breakdown:
-        </h3>
+        </h2>
         <div class="p-section">
             First I initialized a graphical window using SDL2 library functionality, and defining some global constants for the height and width of the window.
         </div>
@@ -52,28 +60,69 @@
             We then created a function called FillCircle, that allows us to fill in the circle for each frame generated for the SDL2 window. Essentially, it takes in the circle's position and radius,
              then generates a distance_squared value, to determine the locations of all the pixels it needs to fill with the specified colors. I also made use of the SDL2 Renderer, since it supports hardware acceleration, 
             and also prevents some amounts of overdrawing natively. It also allows use of V-Sync, a process that synchronizes the local display framerate with the generated frames, prevented frame stutters and hiccups.
-            There are more elegant approaches to preventing frame stutter, but V-Sync worked well for the purposes of this project, as it does not need to be obscenely performant.x 
+            There are more elegant approaches to preventing frame stutter, but V-Sync worked well for the purposes of this project, as it does not need to be obscenely performant. 
+        </div>
+        <div class="p-section">
+            After completing the render functions, we implement mouse events to make sure the objects are interactible, and add functions to both populate an array of LightRay structs, and also render them to a
+             suitable cutoff distance.
         </div>
 
-    </div>
+        <div class="p-section">
+            Now to cut off the rays and create shadows, we calculate a special quadratic derived from combining the ray equation and circle equation as follows:
+        
+        <h2>Ray-Circle Intersection Equation</h2>
 
-    <div class="section">
+            <p>The ray equation is given by:</p>
+            $$ (x, y) = (x_0 + t dx, y_0 + t dy) $$
+
+            <p>The circle equation is:</p>
+            $$ (x - c_x)^2 + (y - c_y)^2 = r^2 $$
+
+            <p>Substituting the ray equation:</p>
+            $$ (x_0 + t dx - c_x)^2 + (y_0 + t dy - c_y)^2 = r^2 $$
+
+            <p>Expanding and simplifying:</p>
+            $$ A t^2 + B t + C = 0 $$
+
+            <p>Where:</p>
+            $$ A = dx^2 + dy^2 $$
+            $$ B = 2 \left( dx (x_0 - c_x) + dy (y_0 - c_y) \right) $$
+            $$ C = (x_0 - c_x)^2 + (y_0 - c_y)^2 - r^2 $$
+
+            <p>The discriminant:</p>
+            $$ D = B^2 - 4AC $$
+
+            <p>Solving for \( t \):</p>
+            $$ t_1 = \frac{-B - \sqrt{D}}{2A}, \quad t_2 = \frac{-B + \sqrt{D}}{2A} $$
+
+            Which now permits us to determine the cutoff length multiplier in both the x and y-directions.
+        </div>
+
+        <div class="p-section">
+            Lastly, we implement collision and collision detection by simply checking if the rendered boundary of the instance of the circle is colliding with the boundaries of another on screen object.
+        </div>
+    </div>
+    
+    <div class="p-section">
+        <h2>
+            Demonstration
+        </h2>
         <p>
-            Feel free to explore the source code and experiment with different parameters for the ray tracing algorithm.
+            Feel free to explore the source code and experiment with different parameters for the ray tracing algorithm!
         </p>
         <p>
-            Below is a GIF demonstration of the raytracing process.
+            Below is a GIF demonstration of the raytracing process in the application I built.
         </p>
         <div class="gif-container">
-            <img src="/Files/DemoFiles/DemoGifs/RayTracingDemo.gif" alt="Raytracing Demo GIF" class="demo-gif">
+            <img src="/Files/DemoFiles/DemoGifs/RayTracing/RayTracingDemo.gif" alt="Raytracing Demo GIF" class="demo-gif">
         </div>
     </div>
 
-    <div class="image-container">
+    <!-- <div class="image-container">
         <img src="path_to_your_image.jpg" alt="Image Description">
         <div class="caption">
             Your caption text goes here. You can include LaTeX or Markdown: $E = mc^2$, **bold text**, *italic text*.
-        </div>
+        </div> -->
         
     </div>
 </body>
