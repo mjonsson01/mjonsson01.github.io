@@ -19,8 +19,88 @@
 <body>
     <div id="navbar-container"></div>
      <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
-    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
+    <!-- <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
         WORK IN PROGRESS
-    </div>
+    </div> -->
 </body>
+
+<h1>Haskell Chess Engine AI and Terminal Interface Demo</h1>
+<div class="section">
+    <p>
+        This demo page showcases the substantial chess engine interface and AI opponent functionality built as part of a group project in Haskell.
+        The project features a fully functional terminal application, complete local opponent matchups, importing board test cases, depth toggles, 
+        verbosity toggles, and more. We also implemented early exit conditions to improve the optimization of the number of nodes expanded by the program to gain
+        a significant efficiency boost.
+    </p>
+    <p>
+        The source code, boards, and test cases can be found at <a href="https://github.com/mjonsson01/haskell-Chess">Haskell Chess.</a>
+    </p>
+
+    <h2>
+        Demonstration:
+    </h2>
+    <p>
+        We begin by launching the application:
+    </p>
+    <!-- <div class="image-container">
+        <img src="path_to_your_image.jpg" alt="Image Description">
+        <div class="caption">
+            After Launching the application, we are greeted with the available flags        
+        </div> -->
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/HelpFlags.png" style="width:70%;"alt="Image Description">
+        <div class="caption">
+            After starting the application, we are greeted with the available flags        
+    </div>
+    <p>
+        We can make use of the '-t' flag to toggle two player local play, with an inverting board for each player. There is an option to select a non-traditional
+        starting board which can be loaded inside the aptly named "txtcases" using txt files and the format provided.
+    </p>
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/TwoPlayer.png" style="width: 80%;max-width: 600px; height: auto;" alt="Image Description">
+        <div class="caption">
+            A standard start to a two player interactive game. 
+    </div>
+    <p>
+        By using the '-i' flag, we can launch an interactive game. We can specify a specific board to begin interactive play from, as well as a depth limit if 
+        we want to run a deeper or shallower calculation. After a few seconds, the AI makes the move, and the board is returned with the move input reflected on the
+        ASCII.
+    </p>
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/AIMove.png" style="width: 80%;max-width: 600px; height: auto;" alt="Image Description">
+        <div class="caption">
+            An opening game AI move, with default no flags.
+    </div>
+    <p>
+
+    </p>
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/ImportGameAIMove.png" style="width: 80%;max-width: 700px; height: auto;" alt="Image Description">
+        <div class="caption">
+            An late game AI Move, using one of the "txt" cases.
+    </div>
+    <p>
+        We can run the AI on arbitrary positions by using or writing our own "txtcase."  In this case, the checkmate is in the depth range, so the algorithm finds the right move.
+        We specified the depth as 6 using "-d 6" rather than the standard 5, and this can be used with the "-v" tags for visual
+        output as well.
+    </p>
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/EstimateSolverDepth.png" style="width: 80%;height: auto;" alt="Image Description">
+        <div class="caption">
+            An estimate calculation for a checkmate in two.
+    </div>
+    <p>
+        In addition to our estimating solver, we included an absolute solver as well, using the '-w' flag. This one calculates an uncapped amount of time until it finds
+        a checkmating move. This one is recommended only for games where a known checkmate exists, and serves no utilitarian purpose for regular games because of its slow
+        calculation times.
+    </p>
+    <div class="image-container">
+        <img src="/Files/DemoFiles/DemoImages/Chess/WinningAlgoNonV.png" style="width: 80%;height: auto;" alt="Image Description">
+        <div class="caption">
+            An absolutely calculated checkmate in one. This can be paired with the '-v' verbose tags to produce the visual output as well as rate the position for side whose 
+            turn it is.
+    </div>
+
+
+</div>
 </html>

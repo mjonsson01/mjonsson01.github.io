@@ -15,21 +15,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marco Jonsson's Projects</title>
     <link rel="stylesheet" href="/CSSStyles/styles.css">
+    <style>
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            user-select: none;
+        }
+    </style>
 </head> 
+
 <body>
+    <div id="navbar-container"></div>
+    <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
 
-     <div id="navbar-container"></div>
-     <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
-
-    <h1>Welcome to Marco Jonsson's Personal Portfolio</h1>
-    <div class="section">
-        <p>
-            Check out my work, my interests and hobbies, or contact me using the NavBar above!
-        </p>
-        <p> 
-            A downloadable copy of my Resumé can be found in the About Me section!
-        </p>
+    <!-- Home Page Text -->
+    <div id="home-content">
+        <h1>Welcome to Marco Jonsson's Personal Portfolio</h1>
+        <p>Explore my work, interests, and projects, or just a little more about me!</p>
+        <p>A downloadable copy of my resumé can be found in the <a href="/Pages/AboutMe/about-me.html">About Me section.</a></p>
+        <div id="forward-button">Click to Enter ↓</div>
     </div>
+
+    <!-- Image Gallery (Hidden Initially) -->
+    <div id="gallery-container">
+        <div id="navigation-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+        </div>
+    </div>
+    <!-- Back Button -->
+    <button id="back-button">Back to Home</button>
+
+    <script>
+        const homeContent = document.getElementById("home-content");
+        const galleryContainer = document.getElementById("gallery-container");
+        const forwardIndicator = document.getElementById("forward-button");
+        const backButton = document.getElementById("back-button");
+        let isActive = false;
+
+        function enterGallery() {
+            if (isActive) return; // Prevent re-initialization
+
+            homeContent.style.transform = "translateY(-100%)";
+            homeContent.style.opacity = "0";
+            
+            galleryContainer.style.transform = "translateY(0)";
+            backButton.style.transform = "translateY(0)";
+            galleryContainer.style.opacity = "1";
+            backButton.style.opacity="1";
+            isActive = true;
+
+            
+        
+            // Now initialize track interaction logic
+            initTrack();
+        }
+        document.getElementById("back-button").addEventListener("click", returnHome);
+
+        // Listen for swipe or click
+        forwardIndicator.addEventListener("click", enterGallery);
+        window.addEventListener("touchstart", enterGallery);
+
+        function initTrack() {
+            const track = document.getElementById("navigation-track");
+            let isDragging = false;
+            let startX = 0;
+            let prevPercentage = 0;
+        
+            console.log("Track interaction initialized!");
+            window.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                startX = e.clientX;
+                track.dataset.mouseDownAt = startX;
+            });
+    
+            window.addEventListener("mousemove", (e) => {
+                if (!isDragging) return;
+                event.preventDefault();
+                const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+                const maxDelta = window.innerWidth / 2;
+                let percentage = (mouseDelta / maxDelta) * -100;
+    
+                let nextPercentage = prevPercentage + percentage;
+                nextPercentage = Math.max(Math.min(nextPercentage, 0), -100);
+    
+                track.dataset.percentage = nextPercentage;
+    
+                // Apply smooth animation to the track
+                track.style.transform = `translate(${nextPercentage}%, -50%)`;
+    
+                // Preserve hover effect while applying transformation
+                for (const image of track.getElementsByClassName("home-image")) {
+                    image.style.transform = `translateX(${nextPercentage * 0.5}%)`; 
+                }
+            });
+    
+            window.addEventListener("mouseup", () => {
+                isDragging = false;
+                prevPercentage = parseFloat(track.dataset.percentage);
+            });
+    
+            // Fix: Ensure hover effect remains after dragging
+            document.querySelectorAll(".home-image").forEach(image => {
+                image.addEventListener("mouseover", () => {
+                    image.style.transform += " scale(1.1)"; // Keep existing transform
+                });
+    
+                image.addEventListener("mouseout", () => {
+                    image.style.transform = image.style.transform.replace(" scale(1.1)", ""); // Reset scale
+                });
+            });
+    
+        
+            // Implement your previous track dragging logic here...
+        }
+        function returnHome() {
+            homeContent.style.transform = "translateY(0)";
+            homeContent.style.opacity = "1";
+        
+            galleryContainer.style.transform = "translateY(100%)";
+            galleryContainer.style.opacity = "0";
+            backButton.style.opacity="0"
+            isActive = false;
+        }
+        
+    </script>
+</body>
+
+
+
 
 <!-- button table Will not use for now-->
 <!-- <table>
@@ -39,6 +160,11 @@
         <td><button class="styled-button" onclick="location.href='#technical-writing'">Technical Writing Samples</button></td>
     </tr>
 </table> -->
+
+
+
+
+
 <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
     WORK IN PROGRESS
 </div>
