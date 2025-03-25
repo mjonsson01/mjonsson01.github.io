@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.style.pointerEvents = "none"; 
                 link.style.color = "gray"; 
                 // link.style.textDecoration = "none"; 
-                link.style.fontWeight = "bold"; 
+                // link.style.fontWeight = "bold"; 
             }
         });
     }

@@ -210,11 +210,7 @@ table {
 }
 
 
-/* .contact-info {
-
-    text-align: justify;
-} */
-
+/* 
 .contact-container {
     max-width: 600px;
     margin: auto;
@@ -226,6 +222,7 @@ table {
     flex-direction: column;
     gap: 15px;
 }
+
 .contact-entry {
     display: flex;
     align-items: center;
@@ -234,6 +231,7 @@ table {
     padding: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .contact-entry p {
     margin-left: 80px;
     text-align: justify;
@@ -270,7 +268,79 @@ table {
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
+} */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-entry {
+    display: flex;
+    align-items: center;
+    background: #9c9696;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-entry:hover {
+    background: #b2a8a8; /* Lighter background on hover */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.contact-entry p {
+    margin-left: 80px;
+    text-align: justify;
+    color: #000000; 
+}
+
+.contact-entry a {
+    color: #0011ff; 
+    text-decoration: none;
+}
+
+.contact-entry a:hover {
+    text-decoration: underline;
+}
+
+.contact-entry img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 /* Container for the profile picture */
 .profile-pic-container {
     position: absolute;
