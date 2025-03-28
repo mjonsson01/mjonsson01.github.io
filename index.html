@@ -41,13 +41,13 @@
     <!-- Image Gallery (Hidden Initially) -->
     <div id="gallery-container">
         <div id="navigation-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events="none" data-page="/CodingProjects/ProjectPages/haskell-chess.html">
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/SaturnHome.jpg" draggable="false" pointer-events="none" data-page="/CodingProjects/ProjectPages/space-game.html">
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/RayTracingHome.jpg" draggable="false" pointere-events="none" data-page="/CodingProjects/ProjectPages/c-raytracing.html">
             <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
-        <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
+            <img class="home-image" src="/Files/SiteImages/HomePageImages/ChessHome.jpeg" draggable="false" pointer-events: none;>
         </div>
     </div>
     <!-- Back Button -->
@@ -77,6 +77,20 @@
             // Now initialize track interaction logic
             initTrack();
         }
+
+
+                // Function to handle the image click event
+        function handleImageClick(event) {
+            const page = event.target.getAttribute('data-page'); // Get the page from the data attribute
+            if (page) {
+                window.location.href = `/Pages/${page}`; // Change the URL to the page specified
+            }
+        }
+
+        // Attach the click event listener to all images
+        document.querySelectorAll('.home-image').forEach(image => {
+            image.addEventListener('click', handleImageClick);
+        });
         document.getElementById("back-button").addEventListener("click", returnHome);
 
         // Listen for swipe or click
@@ -152,22 +166,9 @@
 
 
 
-<!-- button table Will not use for now-->
-<!-- <table>
-    <tr>
-        <td><button class="styled-button" onclick="location.href='CodingProjects/coding-projects.html'">Coding Projects</button></td>
-        <td><button class="styled-button" onclick="location.href='research-interests'">Research Interests and Honors Thesis</button></td>
-        <td><button class="styled-button" onclick="location.href='#technical-writing'">Technical Writing Samples</button></td>
-    </tr>
-</table> -->
 
 
 
-
-
-<div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
-    WORK IN PROGRESS
-</div>
 </body>
 
 </html>

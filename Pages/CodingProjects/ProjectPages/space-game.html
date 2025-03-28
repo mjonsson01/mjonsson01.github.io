@@ -19,8 +19,51 @@
 <body>
     <div id="navbar-container"></div>
     <script src="/NavBarAndSiteBehaviors/navbar-behavior.js"></script>
-    <div class="section" style="text-align: center; font-size: 2em; font-weight: bold; color: red; margin-top: 50px;">
-        WORK IN PROGRESS
+
+    <h1>
+        Scala Space Game
+    </h1>
+    <div class="section">
+        <h2>Overview</h2>
+        <p>
+            This project was meant to imitate the classic arcade game of Galaga, but with an added functionality of rewinding time. This is achieved 
+            by using a Scala/JavaFX libraries and some custom vector datatypes and GameStates to store information on a frame-by-frame basis, then preserving a Stack of GameStates and popping the contents of the Stack
+            off when the rewinding functionality is triggered. Additional functionality includes scoring based on eliminating enemies and firing enemy bullets
+            out of the air, collisions with enemies, accelerating enemy fire rate and movement speed by round and elimination count, and window flag management.
+
+            I layed out framework to add powerups as well, including a rapid fire powerup and a teleportation powerup.
+        </p>
+
+        <p>
+            You can explore the source code or try it for yourself at <a href="https://github.com/mjonsson01/ScalaSpaceGame"> Scala Space Game.</a>
+        </p>
+
+        <div class= "p-section">
+            <h2>
+                Demonstration
+            </h2>
+
+            <p>
+                The first demo gif demonstrates the typical gameplay. Notice that the enemies acceleate as they get eliminated, and as the waves complete.
+            </p>
+            <div class="gif-container">
+                <img src="/Files/DemoFiles/DemoGifs/ScalaSpaceGame/MainGamePlayLoop.gif" alt="Raytracing Demo GIF" class="demo-gif">
+            </div>
+            <p>
+                The second demo gif shows the bullet block functionality. This is hard to pull off, so it results in a bonus to your score :)
+            </p>
+            <div class="gif-container">
+                <img src="/Files/DemoFiles/DemoGifs/ScalaSpaceGame/BulletBlock.gif" alt="Raytracing Demo GIF" class="demo-gif">
+            </div>
+            <p>
+                The last gif demonstrates the time rewinding functionality. It is limited by the GIF frame rate, but you can use it to undo any mistakes you make
+                that cost you a life! Careful though, it can't revive you if you run out of lives!
+            </p>
+            <div class="gif-container">
+                <img src="/Files/DemoFiles/DemoGifs/ScalaSpaceGame/RewindFunctionality.gif" alt="Raytracing Demo GIF" class="demo-gif">
+            </div>
+        </div>
+        </div>
     </div>
 </body>
 </html>
