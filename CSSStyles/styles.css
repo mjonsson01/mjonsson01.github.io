@@ -73,6 +73,11 @@ table {
     font-weight: bold;
 }
 
+.project-link {
+    color: #3498db;
+    font-weight: bold;
+}
+
 /* Section styling */
 .section {
     text-align: center;
@@ -373,7 +378,9 @@ table {
 #back-button {
     margin-top:80px;
     font-size:20px;
+    font-family: 'Urbanist', sans-serif;
     cursor: pointer;
+    animation: bounce 1.5s infinite;
     padding: 12px 24px;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
@@ -384,6 +391,20 @@ table {
     transform: translateY(100%);
     transition: transform 1s ease, opacity 1s ease;
 }
+/* #forward-button {
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+} */
 
 #back-button:hover {
     background-color: rgba(255, 255, 255, 0.4);
